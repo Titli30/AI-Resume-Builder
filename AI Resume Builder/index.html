@@ -1,1 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder - Create Professional Resumes with AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-robot me-2"></i>AI Resume Builder
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#templates">Templates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary ms-2 px-3" href="dashboard.html">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-4">
+                            Create Professional Resumes with 
+                            <span class="text-gradient">AI Power</span>
+                        </h1>
+                        <p class="lead mb-4">
+                            Leverage Google Gemini AI to build stunning, ATS-friendly resumes in minutes. 
+                            Choose from professional templates and let AI optimize your content.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="dashboard.html" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-rocket me-2"></i>Start Building
+                            </a>
+                            <a href="#features" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-play me-2"></i>Watch Demo
+                            </a>
+                        </div>
+                        <div class="hero-stats mt-5">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="text-primary">50K+</h3>
+                                        <p class="small">Resumes Created</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="text-primary">95%</h3>
+                                        <p class="small">Success Rate</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="text-primary">24/7</h3>
+                                        <p class="small">AI Support</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <div class="resume-preview">
+                            <div class="resume-mockup">
+                                <div class="resume-header"></div>
+                                <div class="resume-content">
+                                    <div class="resume-line"></div>
+                                    <div class="resume-line short"></div>
+                                    <div class="resume-line"></div>
+                                    <div class="resume-line medium"></div>
+                                </div>
+                            </div>
+                            <div class="ai-badge">
+                                <i class="fas fa-brain"></i>
+                                <span>AI Powered</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Powerful AI Features</h2>
+                    <p class="lead">Experience the future of resume building with cutting-edge AI technology</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>AI Content Generation</h4>
+                        <p>Let Google Gemini AI write compelling job descriptions and achievements tailored to your experience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>ATS Optimization</h4>
+                        <p>Ensure your resume passes Applicant Tracking Systems with AI-powered keyword optimization.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Professional Templates</h4>
+                        <p>Choose from a variety of modern, professional templates designed by industry experts.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h4>Multiple Formats</h4>
+                        <p>Export your resume in PDF, Word, or other formats compatible with any application system.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile Friendly</h4>
+                        <p>Build and edit your resume on any device with our responsive, mobile-optimized interface.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Real-time Preview</h4>
+                        <p>See your changes instantly with live preview and make adjustments on the fly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section id="templates" class="py-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Professional Templates</h2>
+                    <p class="lead">Choose from our collection of ATS-friendly, professionally designed templates</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="template-card">
+                        <div class="template-preview">
+                            <div class="template-mockup modern">
+                                <div class="template-header"></div>
+                                <div class="template-sidebar"></div>
+                                <div class="template-content">
+                                    <div class="template-line"></div>
+                                    <div class="template-line short"></div>
+                                    <div class="template-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="template-info">
+                            <h5>Modern Professional</h5>
+                            <p class="small">Clean and contemporary design perfect for tech and creative roles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="template-card">
+                        <div class="template-preview">
+                            <div class="template-mockup classic">
+                                <div class="template-header"></div>
+                                <div class="template-content">
+                                    <div class="template-line"></div>
+                                    <div class="template-line medium"></div>
+                                    <div class="template-line"></div>
+                                    <div class="template-line short"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="template-info">
+                            <h5>Classic Executive</h5>
+                            <p class="small">Traditional layout ideal for corporate and executive positions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="template-card">
+                        <div class="template-preview">
+                            <div class="template-mockup creative">
+                                <div class="template-header"></div>
+                                <div class="template-content">
+                                    <div class="template-line"></div>
+                                    <div class="template-line"></div>
+                                    <div class="template-line medium"></div>
+                                </div>
+                                <div class="template-accent"></div>
+                            </div>
+                        </div>
+                        <div class="template-info">
+                            <h5>Creative Portfolio</h5>
+                            <p class="small">Eye-catching design for creative professionals and designers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="dashboard.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-eye me-2"></i>View All Templates
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3">Ready to Build Your Perfect Resume?</h2>
+                    <p class="lead mb-4">Join thousands of professionals who have landed their dream jobs with AI-powered resumes</p>
+                    <a href="dashboard.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-rocket me-2"></i>Start Building Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 AI Resume Builder. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">Privacy Policy</a>
+                    <a href="#" class="text-light me-3">Terms of Service</a>
+                    <a href="#" class="text-light">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
