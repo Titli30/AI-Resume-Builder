@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AI Resume Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-robot me-2"></i>AI Resume Builder
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#"><i class="fas fa-user me-1"></i>Profile</a>
+                <a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt me-1"></i>Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar">
+                <div class="sidebar-content">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" data-section="dashboard">
+                                <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-section="templates">
+                                <i class="fas fa-file-alt me-2"></i>Templates
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-section="builder">
+                                <i class="fas fa-edit me-2"></i>Resume Builder
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-section="my-resumes">
+                                <i class="fas fa-folder me-2"></i>My Resumes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-section="ai-assistant">
+                                <i class="fas fa-brain me-2"></i>AI Assistant
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 main-content">
+                <!-- Dashboard Section -->
+                <div id="dashboard" class="content-section active">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2>Dashboard</h2>
+                        <button class="btn btn-primary" onclick="showSection('builder')">
+                            <i class="fas fa-plus me-2"></i>New Resume
+                        </button>
+                    </div>
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>3</h3>
+                                    <p>Total Resumes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>12</h3>
+                                    <p>Downloads</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>25</h3>
+                                    <p>AI Suggestions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>89</h3>
+                                    <p>Profile Views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Recent Resumes</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="resume-item">
+                                        <div class="resume-info">
+                                            <h6>Software Developer Resume</h6>
+                                            <p class="text-muted small">Last modified: 2 hours ago</p>
+                                        </div>
+                                        <div class="resume-actions">
+                                            <button class="btn btn-sm btn-outline-primary me-2">Edit</button>
+                                            <button class="btn btn-sm btn-outline-secondary">Download</button>
+                                        </div>
+                                    </div>
+                                    <div class="resume-item">
+                                        <div class="resume-info">
+                                            <h6>Marketing Manager Resume</h6>
+                                            <p class="text-muted small">Last modified: 1 day ago</p>
+                                        </div>
+                                        <div class="resume-actions">
+                                            <button class="btn btn-sm btn-outline-primary me-2">Edit</button>
+                                            <button class="btn btn-sm btn-outline-secondary">Download</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">AI Tips</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="ai-tip">
+                                        <i class="fas fa-lightbulb text-warning me-2"></i>
+                                        <small>Add quantifiable achievements to make your resume stand out</small>
+                                    </div>
+                                    <div class="ai-tip">
+                                        <i class="fas fa-lightbulb text-warning me-2"></i>
+                                        <small>Use action verbs to describe your responsibilities</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Templates Section -->
+                <div id="templates" class="content-section">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2>Choose a Template</h2>
+                        <div class="template-filters">
+                            <button class="btn btn-outline-primary active" data-filter="all">All</button>
+                            <button class="btn btn-outline-primary" data-filter="modern">Modern</button>
+                            <button class="btn btn-outline-primary" data-filter="classic">Classic</button>
+                            <button class="btn btn-outline-primary" data-filter="creative">Creative</button>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="template-card-large" data-template="modern-pro">
+                                <div class="template-preview-large">
+                                    <div class="template-mockup modern">
+                                        <div class="template-header"></div>
+                                        <div class="template-sidebar"></div>
+                                        <div class="template-content">
+                                            <div class="template-line"></div>
+                                            <div class="template-line short"></div>
+                                            <div class="template-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="template-info">
+                                    <h5>Modern Professional</h5>
+                                    <p class="small text-muted">Perfect for tech and creative roles</p>
+                                    <button class="btn btn-primary btn-sm" onclick="selectTemplate('modern-pro')">
+                                        Use Template
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="template-card-large" data-template="classic-exec">
+                                <div class="template-preview-large">
+                                    <div class="template-mockup classic">
+                                        <div class="template-header"></div>
+                                        <div class="template-content">
+                                            <div class="template-line"></div>
+                                            <div class="template-line medium"></div>
+                                            <div class="template-line"></div>
+                                            <div class="template-line short"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="template-info">
+                                    <h5>Classic Executive</h5>
+                                    <p class="small text-muted">Traditional layout for corporate roles</p>
+                                    <button class="btn btn-primary btn-sm" onclick="selectTemplate('classic-exec')">
+                                        Use Template
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="template-card-large" data-template="creative-port">
+                                <div class="template-preview-large">
+                                    <div class="template-mockup creative">
+                                        <div class="template-header"></div>
+                                        <div class="template-content">
+                                            <div class="template-line"></div>
+                                            <div class="template-line"></div>
+                                            <div class="template-line medium"></div>
+                                        </div>
+                                        <div class="template-accent"></div>
+                                    </div>
+                                </div>
+                                <div class="template-info">
+                                    <h5>Creative Portfolio</h5>
+                                    <p class="small text-muted">Eye-catching design for creatives</p>
+                                    <button class="btn btn-primary btn-sm" onclick="selectTemplate('creative-port')">
+                                        Use Template
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume Builder Section -->
+                <div id="builder" class="content-section">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="builder-sidebar">
+                                <div class="builder-header">
+                                    <h4>Resume Builder</h4>
+                                    <div class="builder-actions">
+                                        <button class="btn btn-sm btn-outline-primary me-2" onclick="saveResume()">
+                                            <i class="fas fa-save"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-secondary" onclick="downloadResume()">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="builder-sections">
+                                    <div class="builder-section active" data-section="personal">
+                                        <h6><i class="fas fa-user me-2"></i>Personal Information</h6>
+                                    </div>
+                                    <div class="builder-section" data-section="experience">
+                                        <h6><i class="fas fa-briefcase me-2"></i>Work Experience</h6>
+                                    </div>
+                                    <div class="builder-section" data-section="education">
+                                        <h6><i class="fas fa-graduation-cap me-2"></i>Education</h6>
+                                    </div>
+                                    <div class="builder-section" data-section="skills">
+                                        <h6><i class="fas fa-cogs me-2"></i>Skills</h6>
+                                    </div>
+                                </div>
+
+                                <div class="ai-assistant-panel">
+                                    <h6><i class="fas fa-brain me-2"></i>AI Assistant</h6>
+                                    <button class="btn btn-sm btn-success w-100 mb-2" onclick="generateContent()">
+                                        <i class="fas fa-magic me-1"></i>Generate Content
+                                    </button>
+                                    <!-- <button class="btn btn-sm btn-info w-100 mb-2" onclick="optimizeResume()">
+                                        <i class="fas fa-search me-1"></i>Optimize for ATS
+                                    </button> -->
+                                    <button class="btn btn-sm btn-primary w-100 mb-2" onclick="getJobSpecificSuggestions()">
+                                        <i class="fas fa-briefcase me-1"></i>Job-Specific Tips
+                                    </button>
+                                    <button class="btn btn-sm btn-secondary w-100 mb-2" onclick="analyzeResume()">
+                                        <i class="fas fa-chart-bar me-1"></i>Analyze Resume
+                                    </button>
+                                    <!-- <button class="btn btn-sm btn-info w-100 mb-2" onclick="getKeywordSuggestions()">
+                                        <i class="fas fa-key me-1"></i>Keyword Suggestions
+                                    </button> -->
+                                    <!-- <button class="btn btn-sm btn-warning w-100" onclick="updateGeminiApiKey()">
+                                        <i class="fas fa-key me-1"></i>Update API Key
+                                    </button> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="resume-preview-container">
+                                <div class="resume-preview" id="resumePreview">
+                                    <div class="resume-page">
+                                        <div class="resume-header-section">
+                                            <h2 contenteditable="true" id="fullName">Your Name</h2>
+                                            <p contenteditable="true" id="jobTitle">Job Title</p>
+                                            <div class="contact-info">
+                                                <span contenteditable="true" id="email">email@example.com</span> |
+                                                <span contenteditable="true" id="phone">(555) 123-4567</span> |
+                                                <span contenteditable="true" id="location">City, State</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="resume-section">
+                                            <h4>Professional Summary</h4>
+                                            <p contenteditable="true" id="summary">
+                                                Write a compelling professional summary that highlights your key achievements and skills...
+                                            </p>
+                                        </div>
+
+                                        <div class="resume-section">
+                                            <h4>Work Experience</h4>
+                                            <div class="experience-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <h5 contenteditable="true">Job Title</h5>
+                                                    <span contenteditable="true">2020 - Present</span>
+                                                </div>
+                                                <h6 contenteditable="true">Company Name</h6>
+                                                <ul>
+                                                    <li contenteditable="true">Achievement or responsibility description</li>
+                                                    <li contenteditable="true">Another achievement with quantifiable results</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="resume-section">
+                                            <h4>Education</h4>
+                                            <div class="education-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <h5 contenteditable="true">Degree Name</h5>
+                                                    <span contenteditable="true">Year</span>
+                                                </div>
+                                                <h6 contenteditable="true">University Name</h6>
+                                            </div>
+                                        </div>
+
+                                        <div class="resume-section">
+                                            <h4>Skills</h4>
+                                            <div class="skills-list">
+                                                <span class="skill-tag" contenteditable="true">JavaScript</span>
+                                                <span class="skill-tag" contenteditable="true">Python</span>
+                                                <span class="skill-tag" contenteditable="true">React</span>
+                                                <span class="skill-tag" contenteditable="true">Node.js</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Assistant Section -->
+                <div id="ai-assistant" class="content-section">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="ai-chat-container">
+                                <div class="ai-chat-header">
+                                    <h4><i class="fas fa-brain me-2"></i>AI Resume Assistant</h4>
+                                    <p class="text-muted">Get personalized suggestions powered by Google Gemini AI</p>
+                                </div>
+                                <div class="ai-chat-messages" id="chatMessages">
+                                    <div class="ai-message">
+                                        <div class="message-avatar">
+                                            <i class="fas fa-robot"></i>
+                                        </div>
+                                        <div class="message-content">
+                                            <p>Hello! I'm your AI resume assistant powered by Google Gemini AI. I can help you:</p>
+                                            <ul>
+                                                <li>Write compelling job descriptions and professional summaries</li>
+                                                <li>Optimize content for ATS systems</li>
+                                                <li>Provide job-specific tips and keyword suggestions</li>
+                                                <li>Analyze your resume's strengths and weaknesses</li>
+                                                <li>Generate industry-specific keywords and skills</li>
+                                            </ul>
+                                            <p>Use the buttons in the sidebar or ask me directly. What would you like help with today?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ai-chat-suggestions mb-2">
+                                    <p class="text-muted small mb-1">Try asking:</p>
+                                    <div class="d-flex flex-wrap gap-1">
+                                        <span class="suggestion-chip" onclick="document.getElementById('aiChatInput').value = this.textContent; sendAIMessage();">How can I improve my summary?</span>
+                                        <span class="suggestion-chip" onclick="document.getElementById('aiChatInput').value = this.textContent; sendAIMessage();">What skills should I highlight?</span>
+                                        <span class="suggestion-chip" onclick="document.getElementById('aiChatInput').value = this.textContent; sendAIMessage();">How do I quantify achievements?</span>
+                                        <span class="suggestion-chip" onclick="document.getElementById('aiChatInput').value = this.textContent; sendAIMessage();">What keywords should I include?</span>
+                                        <span class="suggestion-chip" onclick="document.getElementById('aiChatInput').value = this.textContent; sendAIMessage();">Analyze my resume strengths and weaknesses</span>
+                                        <span class="suggestion-chip" onclick="document.getElementById('aiChatInput').value = this.textContent; sendAIMessage();">How can I make my resume stand out?</span>
+                                        <span class="suggestion-chip" onclick="document.getElementById('aiChatInput').value = this.textContent; sendAIMessage();">Common resume mistakes to avoid</span>
+                                    </div>
+                                </div>
+                                <div class="ai-chat-input">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="aiChatInput" placeholder="Ask me anything about your resume...">
+                                        <button class="btn btn-primary" onclick="sendAIMessage()">
+                                            <i class="fas fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
